@@ -1,0 +1,8 @@
+<!-- <ul *ngFor="let t of toDos">
+    <li>{{t.sno}} - {{t.title}} - {{t.desc}} - {{t.active}}</li>
+</ul> -->
+<app-add-todo></app-add-todo>
+<h4>Your Todos</h4>
+<div *ngFor="let t of toDos">
+    <app-todo-item [todo]="t" (todoDelete)="deleteTodo($event)"></app-todo-item>
+</div>
